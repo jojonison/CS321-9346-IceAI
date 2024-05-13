@@ -22,20 +22,30 @@ MODEL_PATH = 'mobilenetv2.h5'
 
 model = load_model(MODEL_PATH)
 print('Model loaded. check localhost')
-labels = ['arabica, excelsa, liberica, robusta']
+
+class_dict = {
+    'Arabica': 0,
+    'Excela': 1,
+    'Liberica': 2,
+    'Robusta': 3
+}
+
+class_labels = list(class_dict.keys())
+
 def model_predict(img_path, model):
     img = image.load_img(img_path, target_size=(224, 224))
 
-    # Preprocessing the image
+    # # Preprocessing the image
     x = image.img_to_array(img)
     # x = np.true_divide(x, 255)
     x = np.expand_dims(x, axis=0)
 
     # Be careful how your trained model deals with the input
     # otherwise, it won't make correct prediction!
-    x = preprocess_input(x, mode='caffe')
+    # x = preprocess_input(x, mode='caffe')
 
     preds = model.predict(x)
+    # preds = model.predict(img)
     return preds
 
 
@@ -65,7 +75,8 @@ def upload():
         # pred_class = decode_predictions(preds, top=1)   # ImageNet Decode
         # result = str(pred_class[0])               # Convert to string
         p = np.argmax(preds, axis=1)
-        return labels[p]
+
+        return class_labels[p[0]]
     return None
 
 
