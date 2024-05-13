@@ -10,3 +10,4 @@ keras, tensorflow, gevent, numpy
 
 Step 3:
 run (make sure it runs on the right kernel)
+python app.py in directory
