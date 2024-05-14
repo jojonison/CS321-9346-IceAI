@@ -72,6 +72,7 @@ def upload():
         preds = prediction[0]
         highest_prob = prediction[1]
 
+        # Access label and Confidence Score
         p = np.argmax(preds, axis=1)
         predicted_label = class_labels[p[0]]
 
