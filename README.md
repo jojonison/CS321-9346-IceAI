@@ -24,8 +24,8 @@ Group Ice Ai:
 5. Molintas, Jonison 
 6. Saguid, Haydee 
 7. Sollorin, John Michael
-\nAdviser:
-\nJosephine Dela Cruz
+--------------------------------------------------------------------------------------------------------------------------------------
+Adviser: nJosephine Dela Cruz
 --------------------------------------------------------------------------------------------------------------------------------------
 Disclaimer:
 The application can make mistakes. Check important info
