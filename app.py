@@ -76,7 +76,12 @@ def upload():
         p = np.argmax(preds, axis=1)
         predicted_label = class_labels[p[0]]
 
-        result = f"{predicted_label} ({highest_prob:.2f}% Confidence)"
+        # Get the actual label via filename
+        filename = os.path.splitext(os.path.basename(file_path))[0]
+        actual_label = re.sub(r'\d+', '', filename)
+
+        result = f"{predicted_label} ({highest_prob:.2f}% Confidence)\n" \
+        f"Actual Label: {actual_label}"
 
         # deletes the file after, can remove this if we want to have a history feature
         os.remove(file_path) 
