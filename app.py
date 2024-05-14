@@ -25,7 +25,7 @@ print('Model loaded. check localhost')
 
 class_dict = {
     'Arabica': 0,
-    'Excela': 1,
+    'Excelsa': 1,
     'Liberica': 2,
     'Robusta': 3
 }
@@ -80,8 +80,9 @@ def upload():
         filename = os.path.splitext(os.path.basename(file_path))[0]
         actual_label = re.sub(r'\d+', '', filename)
 
-        result = f"{predicted_label} ({highest_prob:.2f}% Confidence)\n" \
-        f"Actual Label: {actual_label}"
+        result = f"{predicted_label} ({highest_prob:.2f}% Confidence)\n" 
+        #\
+        #f"Actual Label: {actual_label}"
 
         # deletes the file after, can remove this if we want to have a history feature
         os.remove(file_path) 
