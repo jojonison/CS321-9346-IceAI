@@ -69,14 +69,13 @@ def upload():
 
         # Make prediction
         preds = model_predict(file_path, model)
-
-        # Process your result for human
-        # pred_class = preds.argmax(axis=-1)            # Simple argmax
-        # pred_class = decode_predictions(preds, top=1)   # ImageNet Decode
-        # result = str(pred_class[0])               # Convert to string
         p = np.argmax(preds, axis=1)
+        result = class_labels[p[0]]
 
-        return class_labels[p[0]]
+        # deletes the file after, can remove this if we want to have a history feature
+        os.remove(file_path) 
+
+        return result
     return None
 
 
