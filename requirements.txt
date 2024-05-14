@@ -1,0 +1,13 @@
+Flask==2.2.5
+gevent==24.2.1
+keras==2.15.0
+numpy==1.24.3
+Werkzeug==2.2.3
+tf_keras==2.15.1
+tensorboard==2.15.2
+tensorboard-data-server==0.7.2
+tensorflow-decision-forests==1.8.1
+tensorflow-estimator==2.15.0
+tensorflow-hub==0.16.1
+tensorflow-intel==2.15.1
+tensorflow-io-gcs-filesystem==0.31.0
