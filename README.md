@@ -1,5 +1,6 @@
-cant upload model from browser, idk what acc is logged in my cmd so i cant push it too
 
+Can use pip install -r requirements.txt
+--------------------------------------------
 Step 1:
 Install Flask
 pip install flask
