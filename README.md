@@ -16,6 +16,7 @@ The AI model used in the application was trained using MobileNetV2 with an accur
 Samples: 
 ![AIDemo](https://github.com/jojonison/CS321-9346-IceAI/assets/104635459/601d268f-2839-4d54-8058-da4aeda75bf7)
 ![AIDemo2](https://github.com/jojonison/CS321-9346-IceAI/assets/104635459/ea04c955-f01b-4c9a-a77b-81737a3301be)
+![AIDemo3](https://github.com/jojonison/CS321-9346-IceAI/assets/104635459/914ae115-58ca-4006-8de6-6acd458787ab)
 --------------------------------------------------------------------------------------------------------------------------------------
 Group Ice Ai:
 1. Alfiler, Valjunyor
