@@ -12,6 +12,7 @@ Alternatively, make sure the following libraries are installed in the environmen
 --------------------------------------------------------------------------------------------------------------------------------------
 This is an application that can classify images of Arabica, Excelsa, Liberica, and Robusta leaves.
 The AI model used in the application was trained using MobileNetV2 with an accuracy of 86.86%
+--------------------------------------------------------------------------------------------------------------------------------------
 Samples: 
 ![AIDemo](https://github.com/jojonison/CS321-9346-IceAI/assets/104635459/601d268f-2839-4d54-8058-da4aeda75bf7)
 ![AIDemo2](https://github.com/jojonison/CS321-9346-IceAI/assets/104635459/ea04c955-f01b-4c9a-a77b-81737a3301be)
