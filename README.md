@@ -25,7 +25,7 @@ Group Ice Ai:
 6. Saguid, Haydee 
 7. Sollorin, John Michael
 --------------------------------------------------------------------------------------------------------------------------------------
-Adviser: nJosephine Dela Cruz
+Adviser: Josephine Dela Cruz
 --------------------------------------------------------------------------------------------------------------------------------------
 Disclaimer:
 The application can make mistakes. Check important info
