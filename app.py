@@ -45,15 +45,15 @@ def model_predict(img_path, model):
     # x = preprocess_input(x, mode='caffe')
 
     preds = model.predict(x)
-    # preds = model.predict(img)
-    return preds
+    prob = np.max(preds[0])
+    highest_prob = prob*100
 
+    return [preds, highest_prob]
 
 @app.route('/', methods=['GET'])
 def index():
     # Main page
     return render_template('index.html')
-
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
@@ -68,17 +68,20 @@ def upload():
         f.save(file_path)
 
         # Make prediction
-        preds = model_predict(file_path, model)
+        prediction = model_predict(file_path, model)
+        preds = prediction[0]
+        highest_prob = prediction[1]
 
-        # Process your result for human
-        # pred_class = preds.argmax(axis=-1)            # Simple argmax
-        # pred_class = decode_predictions(preds, top=1)   # ImageNet Decode
-        # result = str(pred_class[0])               # Convert to string
         p = np.argmax(preds, axis=1)
+        predicted_label = class_labels[p[0]]
 
-        return class_labels[p[0]]
+        result = f"{predicted_label} ({highest_prob:.2f}% Confidence)"
+
+        # deletes the file after, can remove this if we want to have a history feature
+        os.remove(file_path) 
+
+        return result
     return None
-
 
 if __name__ == '__main__':
     app.run(debug=True)
