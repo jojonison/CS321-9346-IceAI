@@ -11,5 +11,6 @@ optree==0.11.0
 Pygments==2.18.0
 typing_extensions==4.11.0
 Werkzeug==3.0.3
+gevent==24.2.1
 keras==2.15.0
 tensorflow==2.15.0
