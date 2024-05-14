@@ -10,13 +10,11 @@ Alternatively, make sure the following libraries are installed in the environmen
 4. tensorflow version 2.15 - pip install tensorflow==2.15.0
 5. flask
 --------------------------------------------------------------------------------------------------------------------------------------
+This is an application that can classify images of Arabica, Excelsa, Liberica, and Robusta leaves.
+The AI model used in the application was trained using MobileNetV2 with an accuracy of 86.86%
 Samples: 
 ![AIDemo](https://github.com/jojonison/CS321-9346-IceAI/assets/104635459/601d268f-2839-4d54-8058-da4aeda75bf7)
 ![AIDemo2](https://github.com/jojonison/CS321-9346-IceAI/assets/104635459/ea04c955-f01b-4c9a-a77b-81737a3301be)
---------------------------------------------------------------------------------------------------------------------------------------
-This is an application that can classify images of Arabica, Excelsa, Liberica, and Robusta leaves.
-
-The AI model used in the application was trained using MobileNetV2 with an accuracy of 86.86%
 --------------------------------------------------------------------------------------------------------------------------------------
 Group Ice Ai:
 1. Alfiler, Valjunyor
@@ -26,8 +24,8 @@ Group Ice Ai:
 5. Molintas, Jonison 
 6. Saguid, Haydee 
 7. Sollorin, John Michael
-Adviser:
-Josephine Dela Cruz
+\nAdviser:
+\nJosephine Dela Cruz
 --------------------------------------------------------------------------------------------------------------------------------------
 Disclaimer:
 The application can make mistakes. Check important info
