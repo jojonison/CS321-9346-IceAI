@@ -33,18 +33,15 @@ class_dict = {
 class_labels = list(class_dict.keys())
 
 def model_predict(img_path, model):
-    img = image.load_img(img_path, target_size=(224, 224))
+    target_size = (224, 224)
 
-    # # Preprocessing the image
-    x = image.img_to_array(img)
-    # x = np.true_divide(x, 255)
-    x = np.expand_dims(x, axis=0)
+    img = image.load_img(img_path, target_size=target_size)
+    img_array = image.img_to_array(img)
+    img_array = np.expand_dims(img_array, axis=0)
 
-    # Be careful how your trained model deals with the input
-    # otherwise, it won't make correct prediction!
-    # x = preprocess_input(x, mode='caffe')
+    img_array /= 255.
 
-    preds = model.predict(x)
+    preds = model.predict(img_array)
     prob = np.max(preds[0])
     highest_prob = prob*100
 
